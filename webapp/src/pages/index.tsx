@@ -9,6 +9,7 @@ import { useState, useEffect} from 'react'
 import {ethers} from "ethers"
 
 import ReadERC20 from '../components/ReadERC20'
+import TransferERC20 from '../components/TransferERC20'
 
 declare let window:any
 
@@ -95,6 +96,13 @@ const Home: NextPage = () => {
         <Box  mb={0} p={4} w='100%' borderWidth="1px" borderRadius="lg">
           <Heading my={4}  fontSize='xl'>Read ClassToken Info</Heading>
           <ReadERC20 
+            addressContract='0xe7f1725e7734ce288f8367e1bb143e90bb3f0512'
+            currentAccount={currentAccount}
+          />
+        </Box>
+        <Box  mb={0} p={4} w='100%' borderWidth="1px" borderRadius="lg">
+          <Heading my={4}  fontSize='xl'>Transfer Classtoken</Heading>
+          <TransferERC20 
             addressContract='0xe7f1725e7734ce288f8367e1bb143e90bb3f0512'
             currentAccount={currentAccount}
           />
